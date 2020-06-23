@@ -19,8 +19,6 @@ pipeline {
             }
         }
         
-        def deployToDEV = input('Do you want to deploy to DEV?')
-        
         stage ('Deploy to DEV') {
             when {
                deployToDEV
