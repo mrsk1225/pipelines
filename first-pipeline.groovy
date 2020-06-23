@@ -21,7 +21,9 @@ pipeline {
         
         stage ('Deploy to DEV') {
             when {
-               deployToDEV
+                expression {
+                        Select == 'Choice-1'
+                }
             }
             steps {
                 echo 'Deploy to DEV stage'
