@@ -1,1 +1,27 @@
+pipeline {
+  
+  agent any
+  
+  stages {
+  
+    stage ('Stage 1') {
+        steps {
+            println 'Stage 1 running'
+        }
+    }
+    
+    stage ('Stage 2') {
+        steps {
+            println 'Stage 2 running'
+        }
+    }
+    
+    stage ('Stage 3') {
+        steps {
+            println 'Stage 3 running'
+        }
+    }
+  
+  }
 
+}
