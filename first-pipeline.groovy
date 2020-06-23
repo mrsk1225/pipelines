@@ -1,4 +1,9 @@
 pipeline {
     agent any
-    echo "Hello World" 
+    
+    stages {
+        stage ('Checkout') {
+            echo 'Checkout stage'
+        }
+    }
 }
