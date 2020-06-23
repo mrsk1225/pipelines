@@ -1,6 +1,10 @@
 pipeline {
     agent any
     
+    parameters {
+        choice(choices: ['Choice-1', 'Choice-2'], description: 'What\'s your choice?', name: 'Select')
+    }
+    
     stages {
         
         stage ('Checkout') {
@@ -15,7 +19,12 @@ pipeline {
             }
         }
         
+        def deployToDEV = input('Do you want to deploy to DEV?')
+        
         stage ('Deploy to DEV') {
+            when {
+               deployToDEV
+            }
             steps {
                 echo 'Deploy to DEV stage'
             }
