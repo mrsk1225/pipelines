@@ -8,7 +8,7 @@ pipeline {
         steps {
             def props = readJSON file: 'properties.json', returnPojo: true
             def env = props.Environment.get(0).keySet()[0].toString()
-            echo "${env}
+            echo "${env}"
         }
     }
   
