@@ -12,9 +12,8 @@ pipeline {
   
   parameters {
         choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
-        choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
-        //extendedChoice(name: 'Pubisher', value: 'PUB1,PUB2,PUB3,PUB4', defaultValue: 'PUB1,PUB2', multiSelectDelimiter: ',')
         password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
+        //extendedChoice(name: 'Pubisher', value: 'PUB1,PUB2,PUB3,PUB4', defaultValue: 'PUB1,PUB2', multiSelectDelimiter: ',')
   }
   
   stages {
