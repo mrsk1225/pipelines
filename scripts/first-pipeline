@@ -1,3 +1,10 @@
+
+def init() {
+    def props = readJSON file: 'properties.json', returnPojo: true
+    def env = props.Environment.get(0).keySet()[0].toString()
+    echo "${env}"
+}
+
 pipeline {
   
   agent any
@@ -6,9 +13,7 @@ pipeline {
   
     stage ('Init') {
         steps {
-            var props = readJSON file: 'properties.json', returnPojo: true
-            var env = props.Environment.get(0).keySet()[0].toString()
-            echo "${env}"
+            init()
         }
     }
   
