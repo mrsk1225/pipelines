@@ -1,1 +1,30 @@
-"Environment"
+{
+	"Environment": [{
+		"Stag": [{
+			"ServerGroup": [{
+				"DD-DISP01-STG999": "DD-PUB01-STG999",
+				"DD-DISP02-STG999": "DD-PUB02-STG999",
+				"DD-DISP03-STG999": "DD-PUB03-STG999",
+				"DD-DISP04-STG999": "DD-PUB04-STG999"
+			}],
+			"Artifactory": [{
+				"Repo": "ddcom-release-stg999",
+				"Server": "DUNKIN_ARTIFACTORY999"
+			}],
+			"CpCode": [{
+				"Donuts": "395885999",
+				"Nation": "733175999"
+			}],
+			"Url": "https://staging3.dunkidonuts.com/en999",
+			"SlackChannel": "#ddcom-preprod-deployment999"
+		}]	
+	}],
+	"port": [{
+		"Auth": "4502999",
+		"Pub": "4503999"
+	}],
+	"Package": [{
+		"App": "ddcom-ui999",
+		"Config": "ddcom-ui-config999"
+	}]
+}
