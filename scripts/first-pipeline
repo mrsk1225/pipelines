@@ -1,9 +1,8 @@
 
 def init() {
-    /*def props = readJSON file: 'properties.json', returnPojo: true
+    def props = readJSON file: 'properties.json', returnPojo: true
     def env = props.Environment.get(0).keySet()[0].toString()
     echo "${env}"
-    */
 }
 
 pipeline {
@@ -13,7 +12,7 @@ pipeline {
   parameters {
         choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
         password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
-        //extendedChoice(defaultValue: 'whatif', description: 'Run as what if?', multiSelectDelimiter: ',', name: 'whatif', quoteValue: false, saveJSONParameterToFile: false, type: 'PT_SINGLE_SELECT', value: 'whatif, LIVE', visibleItemCount: 2)
+        extendedChoice(defaultValue: 'whatif', description: 'Run as what if?', multiSelectDelimiter: ',', name: 'whatif', quoteValue: false, saveJSONParameterToFile: false, type: 'PT_SINGLE_SELECT', value: 'whatif, LIVE', visibleItemCount: 2)
   }
   
   stages {
