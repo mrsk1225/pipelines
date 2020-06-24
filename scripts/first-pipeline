@@ -11,6 +11,7 @@ pipeline {
   agent any
   
   parameters {
+        choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
         extendedChoice(name: 'Pubisher', value: 'PUB1,PUB2,PUB3,PUB4', defaultValue: 'PUB1,PUB2', multiSelectDelimiter: ',')
   }
   
