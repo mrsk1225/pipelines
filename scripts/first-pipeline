@@ -4,6 +4,14 @@ pipeline {
   
   stages {
   
+    stage ('Init') {
+        steps {
+            def props = readJSON file: 'properties.json', returnPojo: true
+            def env = props.Environment.get(0).keySet()[0].toString()
+            echo "${env}
+        }
+    }
+  
     stage ('Stage 1') {
         steps {
             println 'Stage 1 running'
