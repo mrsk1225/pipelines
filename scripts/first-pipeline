@@ -1,13 +1,18 @@
 
 def init() {
-    def props = readJSON file: 'properties.json', returnPojo: true
+    /*def props = readJSON file: 'properties.json', returnPojo: true
     def env = props.Environment.get(0).keySet()[0].toString()
     echo "${env}"
+    */
 }
 
 pipeline {
   
   agent any
+  
+  parameters {
+        extendedChoice(name: 'Pubisher', values: ['PUB1,PUB2,PUB3,PUB4', defaultValue: 'PUB1,PUB2', multiSelectDelimiter: ',')
+  }
   
   stages {
   
