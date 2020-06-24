@@ -11,7 +11,7 @@ pipeline {
   agent any
   
   parameters {
-        extendedChoice(name: 'Pubisher', values: ['PUB1,PUB2,PUB3,PUB4', defaultValue: 'PUB1,PUB2', multiSelectDelimiter: ',')
+        extendedChoice(name: 'Pubisher', value: 'PUB1,PUB2,PUB3,PUB4', defaultValue: 'PUB1,PUB2', multiSelectDelimiter: ',')
   }
   
   stages {
